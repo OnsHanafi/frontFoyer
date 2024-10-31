@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Foyer } from '../Foyer';
 import { FoyerService } from '../foyer.service';
+import { Foyer } from '../Foyer';
 
 @Component({
   selector: 'app-foyer-list',

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Foyer } from './Foyer';
 import { Observable } from 'rxjs';
+import { Foyer } from './Foyer';
 
 @Injectable({
   providedIn: 'root'
