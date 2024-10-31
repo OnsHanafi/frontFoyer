@@ -13,11 +13,20 @@ export class FoyerService {
 
   constructor(private http: HttpClient) {}
 
+  // getFoyers(): Observable<Foyer[]> {
+  //   return this.http.get<Foyer[]>(`${this.apiUrl}retrieve-all-foyers`);
+  // }
+
+  // addFoyer(foyer: Foyer): Observable<Foyer> {
+  //   return this.http.post<Foyer>(`${this.apiUrl}add-foyer`, foyer);
+  // }
+
   getFoyers(): Observable<Foyer[]> {
-    return this.http.get<Foyer[]>(`${this.apiUrl}retrieve-all-foyers`);
+    return this.http.get<Foyer[]>(`/tpfoyer/foyer/retrieve-all-foyers`);
   }
 
   addFoyer(foyer: Foyer): Observable<Foyer> {
-    return this.http.post<Foyer>(`${this.apiUrl}add-foyer`, foyer);
+    return this.http.post<Foyer>(`/tpfoyer/foyer/add-foyer`, foyer);
   }
+
 }
