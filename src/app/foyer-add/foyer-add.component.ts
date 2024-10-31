@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FoyerService } from '../foyer.service';
-import { Foyer } from '../Foyer';
+import { Foyer } from '../../foyer';
 
 @Component({
   selector: 'app-foyer-add',
