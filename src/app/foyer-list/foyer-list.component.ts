@@ -13,9 +13,18 @@ export class FoyerListComponent implements OnInit {
   constructor(private foyerService: FoyerService) {}
 
   ngOnInit(): void {
-    this.foyerService.getFoyers().subscribe((data: Foyer[]) => {
-      this.foyers = data;
-    });
+      this.getFoyers();
+  }
+
+  getFoyers(): void {
+    this.foyerService.getFoyers().subscribe(
+      (data) => {
+        this.foyers = data; // Handle data as needed
+      },
+      (error) => {
+        console.error('Error retrieving foyers:', error);
+      }
+    );
   }
 
 }
