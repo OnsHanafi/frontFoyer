@@ -1,1 +1,6 @@
-<p>foyer-list works!</p>
+<h2>Foyer List</h2>
+<ul>
+  <li *ngFor="let foyer of foyers">
+    {{ foyer.nomFoyer }} - Capacity: {{ foyer.capaciteFoyer }}
+  </li>
+</ul>

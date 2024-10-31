@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FoyerService } from '../foyer.service';
+import { Foyer } from '../Foyer';
 
 @Component({
   selector: 'app-foyer-add',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './foyer-add.component.css'
 })
 export class FoyerAddComponent {
+  foyer: Foyer = { nomFoyer: '', capaciteFoyer: 0 };
 
+  constructor(private foyerService: FoyerService) {}
+
+  addFoyer(): void {
+    this.foyerService.addFoyer(this.foyer).subscribe(() => {
+      alert('Foyer added successfully');
+      this.foyer = { nomFoyer: '', capaciteFoyer: 0 };
+    });
+  }
 }
