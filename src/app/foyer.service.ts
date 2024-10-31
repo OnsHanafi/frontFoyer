@@ -7,7 +7,7 @@ import { Foyer } from '../foyer';
   providedIn: 'root'
 })
 export class FoyerService {
-  private apiUrl = 'http://localhost:8089/tpfoyer/foyer';
+  private apiUrl = 'http://192.168.1.24:8089/tpfoyer/foyer';
 
   constructor(private http: HttpClient) {}
 
